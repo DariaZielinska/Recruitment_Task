@@ -12,20 +12,22 @@
   <body>
     <section class="main">
       <button id="show-popup-form" class="btn btn-main">Click me!</button>
-      <button class="btn btn-main hidden">Thank You!</button>
+      <button id="end-popup-form" class="btn btn-main hidden">Thank You!</button>
 
       <div class="popup">
 
       <form id="form" class="hidden">
         <i class="fas fa-times-circle"></i>
         <h1>Login</h1>
-        <input type="text" placeholder="E-mail"/>
-        <input type="text" placeholder="Password">
+        <input type="email" placeholder="E-mail"/>
+        <input type="password" placeholder="Password">
         <label>I agree to terms & conditions.
           <input type="checkbox">
           <span> </span>
         </label>
+
         <button type="submit">SUBMIT</button>
+        <div id="error-container"></div>
       </form>
 
       </div>
