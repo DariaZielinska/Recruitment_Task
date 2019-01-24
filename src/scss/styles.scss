@@ -1,2 +1,108 @@
 /* Here goes your CSS */
 @import 'layout/main';
+
+.hidden{
+  display: none;
+}
+
+form{
+  width: 200px;
+  height: 250px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  h1{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+  }
+
+  i{
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    cursor: pointer;
+  }
+
+  input, button{
+    border: 1px solid #838383;
+    width: 150px;
+    height: 30px;
+    margin: 5px auto;
+  }
+
+  input::placeholder{
+    font-size: 10px;
+    padding-left: 20px;
+  }
+
+  label{
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 2px;
+    margin: 10px 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 10px;
+    input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    span{
+      position: absolute;
+      top: 0;
+      left: 23px;
+      height: 15px;
+      width: 15px;
+      border: 1px solid #838383;
+    }
+    span:after{
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 0;
+      width: 5px;
+      height: 10px;
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  label input:checked ~ span:after {
+    display: block;
+  }
+
+  button{
+    background-color: black;
+    color: white;
+    font-size: 10px;
+  }
+  button:hover{
+    border: transparent;
+    animation: changeColor 500ms forwards;
+  }
+}
+
+@keyframes changeColor {
+  0%{
+    background-color: black;
+  }
+  100%{
+    background-color: #FB7C8A;
+  }
+}
+
